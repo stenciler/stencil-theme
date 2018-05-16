@@ -1,0 +1,43 @@
+/*****************************************
+* Variables
+*****************************************/
+
+/*****************************************
+* Layout
+*****************************************/
+.icon {
+	display: inline-block;
+	text-align: center;
+	font-size: 1rem;
+	color: inherit;
+	.embed {
+		display: block;
+		font-size:3.5rem;
+		margin-bottom: 5px;
+		color: inherit;
+		clear:both;
+	}
+	.title {
+		color: inherit;
+		font-size: 0.9rem;
+	}
+}
+
+/*****************************************
+* variant
+*****************************************/
+.icon { 
+	&.standard {
+
+	}
+}
+
+
+/*****************************************
+* styles
+*****************************************/
+.icon { 
+	&.s_standard {
+
+	}
+}

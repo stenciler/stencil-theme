@@ -1,0 +1,134 @@
+/*****************************************
+* Variables
+*****************************************/
+$ux-section-padding: 25px 0px  !default;
+$ux-section-margin: 0px !default;
+$ux-section-header-padding: 15px 0px !default;
+$ux-section-header-margin: 0px !default;
+$ux-section-inner-padding: 15px 0px !default;
+$ux-section-inner-margin: 0px !default;
+$ux-section-footer-padding: 15px 0px !default;
+$ux-section-footer-margin: 0px !default;
+/*****************************************
+* Main
+*****************************************/
+.ux-section {
+	display: block;
+	position: relative;
+	float: initial;
+	padding: $ux-section-padding;
+	margin: $ux-section-margin;
+	overflow: hidden;
+	.container, .container-fluid, .inner {
+		position: relative;
+	}
+}
+
+/*****************************************
+* Variant
+*****************************************/
+.ux-section {
+	&.header {
+		padding-top: 100px;
+	}
+	&.column_2 {
+		position: relative;
+		padding: 0;
+		margin: 0;
+		&:before {
+			content: ' ';
+			width: 50%;
+			background: #fff;
+			position: absolute;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+		&:after {
+			content: ' ';
+			width: 50%;
+			background: #dedede;
+			position: absolute;
+			height: 100%;
+			right: 0;
+			top: 0;
+		}
+		> div {
+			position: relative;
+			z-index: 1;
+		}
+
+	}
+	&.parallax {
+		&:before {
+			content: ' ';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background: rgba(0,0,0,.4);
+			right: 0;
+			top: 0;
+		}
+		&.bright {
+			&:before {
+				background: rgba(255,255,255,.4);
+			}
+		}
+		> .embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			min-width: 100%;
+			min-height: 100%;
+			background-size: cover;
+			z-index: 0;
+			&:before {
+				content: ' ';
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				background: rgba(0,0,0,.9);
+				right: 0;
+				top: 0;
+				position: absolute;
+				background: rgba(0,0,0,.6);
+				z-index: 1;
+			}
+			video {
+				min-width: 100%;
+				min-height: 100%;
+				background-size: cover;
+				transition: 1s opacity;
+				transform: translateX(0%) translateY(0%);
+			}
+		}
+	}
+	&.fullscreen {
+		min-height: 100vh;
+	}
+	&.video {
+
+	}
+	&.map {
+
+	}
+	&.slider {
+		padding: 0;
+		margin: 0;
+	}
+	&.gapnonte {
+		h2 {
+			font-size: 1.7rem;
+			font-weight: normal;
+		}
+	}
+}
+
+/*****************************************
+* Style
+*****************************************/
+.ux-section {
+
+}

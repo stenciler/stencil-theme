@@ -1,0 +1,101 @@
+/*****************************************
+* fonts
+*****************************************/
+$fontsizes: (
+  very-small: 5,
+  6: 6,
+  7: 7,
+  8: 8,
+  9: 10,
+  10: 15,
+  11: 20,
+  12: 25,
+  13: 30,
+  14: 35,
+  15: 40,
+  16: 45,
+  17: 50,
+  18: 55,
+  19: 60,
+  20: 70,
+  21: 75,
+  22: 80,
+  23: 90,
+  24: 100
+  );
+@include fontsizes($fontsizes);
+$fontweights: (
+  light: 300,
+  standard: 400,
+  medium: 500,
+  bold: 600,
+  bolder: 700
+);
+@include fontweights($fontweights);
+/***********************************
+* Color
+************************************/
+$white: #ffffff !default;
+$black: #000000 !default;
+$blue: #abbdd3 !default;
+$lime: #b0eb00 !default;
+$grey: #F8F9FA !default;
+$bright-red: #b30015 !default;
+$dark-blue: #2a00b3 !default;
+$deep-cerulean: #0077b3 !default;
+$bondi-blue: #00b0b3 !default;
+$heliotrope: #8a7dff !default;
+$silver-chalice: #a6a6a6 !default;
+$scorpion: #595959 !default;
+$tundora: #444 !default;
+$mine-shaft: #363636 !default;
+$cod-gray: #111 !default;
+$alabaster: #fafafa !default;
+$navy: #37455a !default;
+$cyan: #a3d9cb !default;
+$peach: #ff9d7a !default;
+$matisse: #1980A2 !default;
+
+$colors: (
+  white: $white,
+  black: $black,
+  navy: $navy,
+  blue: $blue,
+  cyan: $cyan,
+  peach: $peach,
+  lime: $lime,
+  grey: $grey,
+  bright-red: $bright-red,
+  dark-blue: $dark-blue,
+  deep-cerulean: $deep-cerulean,
+  bondi-blue: $bondi-blue,
+  heliotrope: $heliotrope,
+  silver-chalice: $silver-chalice,
+  scorpion: $scorpion,
+  tundora: $tundora,
+  mine-shaft: $mine-shaft,
+  cod-gray: $cod-gray,
+  alabaster: $alabaster,
+  matisse: $matisse
+  );
+@include colors($colors);
+@include borders($colors);
+@include backgrounds($colors);
+
+/*****************************************
+* Space
+*****************************************/
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55,60,70,75, 80,90,100);
+@include spaces($spaceamounts);
+
+
+
+/*****************************************
+* Flex
+*****************************************/
+.toleft {
+  margin-right: auto;
+}
+.toright {
+  margin-left: auto;
+}

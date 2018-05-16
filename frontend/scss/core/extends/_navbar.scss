@@ -1,0 +1,15 @@
+.navbar {
+	&.toolbar {
+		background: #f3f3f3;
+		nav {
+			.nav {
+				li {
+					a {
+						padding-left: 15px;
+						padding-right: 15px;
+					}
+				}
+			}
+		}
+	}
+}

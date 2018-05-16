@@ -1,0 +1,102 @@
+/*****************************************
+* Fonts
+*****************************************/
+@mixin fontsizes($sizes) {
+  @each $size-name, $size in $sizes {
+    .size-#{$size} {
+      font-size: #{$size/10}rem !important;
+    }
+  }
+}
+
+@mixin fontweights($weights) {
+  @each $weight-name, $weight in $weights {
+    .weight-#{$weight} {
+      font-weight: #{$weight} !important;
+    }
+  }
+}
+/*****************************************
+* Spaces
+*****************************************/
+@mixin spaces($spaceamounts) {
+  @each $space in $spaceamounts {
+    .m-#{$space} {
+      margin: #{$space}px !important;
+    }
+    .mt-#{$space} {
+      margin-top: #{$space}px !important;
+    }
+    .mb-#{$space} {
+      margin-bottom: #{$space}px !important;
+    }
+    .mr-#{$space} {
+      margin-right: #{$space}px !important;
+    }
+    .ml-#{$space} {
+      margin-left: #{$space}px !important;
+    }
+    .p-#{$space} {
+      padding: #{$space}px !important;
+    }
+    .pt-#{$space} {
+      padding-top: #{$space}px !important;
+    }
+    .pb-#{$space} {
+      padding-bottom: #{$space}px !important;
+    }
+    .pr-#{$space} {
+      padding-right: #{$space}px !important;
+    }
+    .pl-#{$space} {
+      padding-left: #{$space}px !important;
+    }
+  }
+}
+/*****************************************
+* Color
+*****************************************/
+@mixin colors($colors) {
+  @each $color-name, $color in $colors {
+    .#{$color-name} {
+      color: $color !important;
+    }
+  }
+}
+/*****************************************
+* Color
+*****************************************/
+@mixin borders($colors) {
+  @each $color-name, $color in $colors {
+    .#{$color-name} {
+      border-color: $color !important;
+    }
+  }
+}
+/*****************************************
+* Background
+*****************************************/
+
+@mixin transparent($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: $rgba !important;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+}
+@mixin backgrounds($colors) {
+  @each $color-name, $color in $colors {
+    .bg-#{$color-name} {
+      background-color: $color !important;
+    }
+    @each $alpha in 90, 80, 70, 60, 50, 40, 30, 20, 10 {
+      .bg-#{$color-name}-#{$alpha} {
+        @include transparent($color, $alpha / 100);
+      }
+    }
+  }
+}
+
+@mixin full-bg-img {
+  background-size: cover;
+  background-position: center;
+}

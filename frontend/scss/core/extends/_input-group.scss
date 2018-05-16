@@ -1,0 +1,23 @@
+
+.input-group {
+	&.input-slide {
+		align-items: center;
+		.input {
+			width: 0;
+			-webkit-transition: max-width .5s ease;
+			transition: max-width .5s ease;
+			overflow: hidden;
+		}
+		.input-group-prepend {
+			background: #fff;
+			padding: 15px;
+		}
+		&:hover, &.hover {
+			z-index: 3;
+			.input {
+				width: 300px;
+				left: 0;
+			}
+		}
+	}
+}

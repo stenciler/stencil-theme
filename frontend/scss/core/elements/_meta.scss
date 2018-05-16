@@ -1,0 +1,52 @@
+/*****************************************
+* Variables
+*****************************************/
+
+/*****************************************
+* Layout
+*****************************************/
+.meta {
+	padding: 5px 0;
+	p {
+		margin-bottom: 1px; 
+	}
+	.title {
+		font-size: 1.3rem;
+		margin-bottom: 0;
+		line-height: 1.1;
+	}
+	.category {
+		font-size: 0.9rem;
+
+	}
+	.price  {
+		font-size: 0.9rem;
+	}
+	.crumbs {
+		display: flex;
+		text-align: left;
+		padding:0;
+		margin: 0;
+		font-size: 0.9rem;
+		li  {
+			list-style: none;
+			padding:0 20px 0 0;
+			margin: 0;
+			
+			i {
+				margin-right: 10px;
+			}
+		}
+	}
+	.shares {
+		
+	}
+}
+
+/*****************************************
+* variant
+*****************************************/
+
+/*****************************************
+* styles
+*****************************************/

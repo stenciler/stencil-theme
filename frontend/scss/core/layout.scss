@@ -1,0 +1,82 @@
+/*****************************************
+* Variables
+*****************************************/
+$ux-left-width: 250px !default;
+$ux-right-width: 250px !default;
+$ux-main-width: 100% !default;
+$ux-header-height:  initial !default;
+$ux-header-padding:  0px !default;
+$ux-header-margin: 0px !default;
+/*****************************************
+* Components
+*****************************************/
+@import "layouts/header";
+@import "layouts/cover";
+@import "layouts/section";
+@import "layouts/content";
+@import "layouts/footer";
+/*****************************************
+* Main
+*****************************************/
+.ux {
+	position: relative;
+	display: flex;
+	.ux-main {
+		position: relative;
+		flex: 1;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.ux-left, .ux-right {
+
+	}
+	.ux-left {
+		width: $ux-left-width;
+		margin-left: - $ux-left-width;
+	}
+	.ux-right {
+		width: $ux-right-width;
+		margin-right: - $ux-right-width;
+	}
+} 
+
+.ux {
+	&.left_on {
+		.ux-left {
+			margin-left: 0;
+		}
+	}
+	&.left_off {
+		.ux-left {
+			margin-left: - $ux-left-width;
+		}
+	}
+	&.right_on {
+		.ux-right {
+			margin-right: 0;
+		}
+	}
+	&.right_off {
+		.ux-right {
+			margin-right: - $ux-right-width;
+		}
+	}
+}
+
+/*****************************************
+* Main
+*****************************************/
+.ux-main { 
+	.ux-cover {
+		&.cover100 {
+			height: calc( 100vh - #{$ux-header-height} );
+		}
+	}
+	.ux-section {
+
+	}
+	.ux-footer {
+
+	}
+}

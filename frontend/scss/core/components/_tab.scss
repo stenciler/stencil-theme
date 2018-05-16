@@ -1,0 +1,117 @@
+/*****************************************
+* Variables
+*****************************************/
+
+
+
+
+/*****************************************
+* Main
+*****************************************/
+.ux-tab {
+	.nav-tabs {
+		li {
+			.nav-link {
+
+			}
+		}
+		
+	}
+	.tab-content {
+		min-height: 40px;
+	}
+}
+
+/*****************************************
+* Variant
+*****************************************/
+.ux-tab {
+	&.navleft {
+		display: flex;
+		.nav-tabs {
+			border: none;
+			display: block;
+			min-width: 200px;
+			li {
+				float: initial;
+				width: 100%;
+				.nav-link {
+					border: none;
+					border-bottom: 1px solid #dedede;
+					border-radius: 0;
+					&.active {
+						background: #dedede;
+					}
+				}
+			}
+
+		}
+		.tab-content {
+			min-height: 40px;
+			padding-left: 15px;
+		}
+	}
+	&.navright {
+		display: flex;
+		.nav-tabs {
+			border: none;
+			order: 2;
+			display: block;
+			min-width: 200px;
+			li {
+				float: initial;
+				width: 100%;
+				.nav-link {
+					border: none;
+					border-bottom: 1px solid #dedede;
+					border-radius: 0;
+					&.active {
+						background: #dedede;
+					}
+				}
+			}
+
+		}
+		.tab-content {
+			width: 100%;
+			min-height: 40px;
+			padding-right: 15px;
+		}
+		
+	}
+	&.navbottom {
+		position: relative;
+		.nav-tabs {
+			border: none;
+			position: absolute;
+			bottom: 0;
+			height: 50px;
+			z-index:2;
+			border-top: 1px solid;
+			width: 100%;
+			li {
+				.nav-link {
+					border: none;
+					border-radius: 0;
+					&.active {
+						background: #dedede;
+					}
+				}
+			}
+
+		}
+		.tab-content {
+			position: relative;
+			width: 100%;
+			min-height: 40px;
+		
+			padding-bottom: 50px;
+		}
+	}
+}
+
+
+/*****************************************
+* Style
+*****************************************/
+

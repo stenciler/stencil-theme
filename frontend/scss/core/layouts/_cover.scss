@@ -1,0 +1,126 @@
+/*****************************************
+* Variables
+*****************************************/
+$ux-cover-padding: 25px 0px  !default;
+$ux-cover-margin: 0px !default;
+$ux-cover-header-padding: 15px 0px !default;
+$ux-cover-header-margin: 0px !default;
+$ux-cover-inner-padding: 15px 0px !default;
+$ux-cover-inner-margin: 0px !default;
+$ux-cover-footer-padding: 15px 0px !default;
+$ux-cover-footer-margin: 0px !default;
+
+/*****************************************
+* Main
+*****************************************/
+.ux-cover {
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.4);
+	text-align: center;
+	.container, .container-fluid, .inner {
+		position: relative;
+	}
+	.breadcrumb {
+		background: transparent;
+		ul {
+			display: flex;
+			margin: 0 auto;
+			padding: 0;
+			li {
+				margin: 0;
+				padding: 7px 10px;
+				list-style: none;
+				font-size: 0.9rem;
+			}
+		}
+	}
+	.navbar {
+		padding: 0;
+		ul.nav {
+			display: flex;
+			
+			padding: 0;
+			li {
+				margin: 0;
+				padding: 7px 10px;
+				list-style: none;
+				font-size: 0.9rem;
+			}
+		}
+	}
+}
+
+.ux-cover {
+	&.overlay-light {
+		&:before {
+			content: ' ';
+			background: rgba(255,255,255, 0.7);
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			min-width: 100%;
+			min-height: 100%;
+			z-index: 1;
+		}
+	}
+	&.overlay-dark {
+		&:before {
+			content: ' ';
+			background: rgba(0,0,0, 0.7);
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			min-width: 100%;
+			min-height: 100%;
+			z-index: 1;
+		}
+	}
+}
+
+
+/*****************************************
+* Variant
+*****************************************/
+.ux-cover {
+	&.cover50 {
+		height:50vh;
+	}
+	&.cover100 {
+		height:100vh;
+	}
+}
+
+/*********************************
+* Responsive
+* *******************************/
+@media (max-width: 575.98px) { 
+
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+	.ux-cover {
+		height: initial !important;
+		.embed {
+			img {
+				max-width: initial;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+
+}

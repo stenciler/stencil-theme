@@ -1,0 +1,257 @@
+/*****************************************
+* Variables
+*****************************************/
+
+/*****************************************
+* Layout
+*****************************************/
+.embed {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	img, video, svg, canvas, audio {
+
+	}
+	.badge, .text, .meta {
+		position: absolute;
+		z-index: 1;
+		opacity: 1;
+	}
+	.badge {
+
+	}
+	.text {
+		color: #fff;
+		width: 100%;
+		padding: 10px 15px;
+		bottom: 0;
+		background: rgba(0,0,0,0.7);
+	}
+	.meta {
+		color: #fff;
+		width: 100%;
+		padding: 10px 15px;
+		bottom: 0;
+	}
+	.slide {
+		display: block;
+		width: 100%;
+	}
+}
+.embed {
+	.top {
+		top: 0px;
+	}
+	.top_left {
+		top: 15px;
+		left: 15px;
+	}
+	.top_right {
+		top: 15px;
+		right: 15px;
+	}
+	.bottom {
+		bottom: 0;
+	}
+	.onhover {
+		-webkit-transition: opacity 1s ease-in-out;
+		-moz-transition: opacity 1s ease-in-out;
+		-o-transition: opacity 1s ease-in-out;
+		transition: opacity 1s ease-in-out;
+		opacity: 0;
+	}
+	&:hover, .hover {
+		.onhover {
+			display: block;
+			opacity: 1;
+		}
+	}
+}
+
+/*****************************************
+* variant
+*****************************************/
+.embed { 
+	&.parallax {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		min-width: 100%;
+		min-height: 100%;
+		background-size: cover;
+		.bg {
+			width: initial;
+			max-width: initial;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&.owl {
+		display: block;
+		width: 100%;
+		.slide {
+			width: 100%;
+			display: block;
+		}
+	} 
+	&.flip {
+		.frontside {
+			opacity: 1;
+		}
+		.backside {
+			position: absolute;
+			top: 0;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+		}
+		&.flip-fade {
+			.fliper {
+				&:hover, &.hover {
+					.frontside {
+						opacity: 0;
+					}
+					.backside {
+						opacity: 1;
+					}
+				}
+
+			}
+			.frontside, .backside {
+				-webkit-transition: opacity 1s ease-in-out;
+				-moz-transition: opacity 1s ease-in-out;
+				-o-transition: opacity 1s ease-in-out;
+				transition: opacity 1s ease-in-out;
+			}
+			
+		}
+		&.flip-standard {
+			-webkit-perspective: 1000;
+			-moz-perspective: 1000;
+			-o-perspective: 1000;
+			perspective: 1000;
+			&:hover, &.hover {
+				.fliper {
+					-webkit-transform: rotateY(180deg);
+					-moz-transform: rotateY(180deg);
+					-o-transform: rotateY(180deg);
+					transform: rotateY(180deg);
+				}
+			}
+			.fliper {
+				-webkit-transition: 0.6s;
+				-webkit-transform-style: preserve-3d;
+				-moz-transition: 0.6s;
+				-moz-transform-style: preserve-3d;
+				-o-transition: 0.6s;
+				-o-transform-style: preserve-3d;
+				transition: 0.6s;
+				transform-style: preserve-3d;
+				position: relative;
+			}
+			
+			.frontside, .backside {
+				-webkit-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-o-backface-visibility: hidden;
+				backface-visibility: hidden;
+			}
+			.backside {
+				-webkit-transform: rotateY(180deg);
+				-moz-transform: rotateY(180deg);
+				-o-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+				background: #f8f8f8;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 1;
+
+			}
+			
+		}
+		&.flip-slide {
+			.fliper {
+				position: relative;
+				&:hover, &.hover {
+					div {
+						z-index: 3;
+						opacity: 1;
+						-webkit-transform: translateX(-100%);
+						-ms-transform: translateX(-100%);
+						transform: translateX(-100%);
+					}
+				}
+			}
+			.frontside, .backside {
+				-webkit-transition: all .3s ease;
+				transition: all .3s ease;
+			}
+			.backside {
+				left: 100%;
+				opacity: 1;
+				top: 0;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			
+
+		}
+		&.flip-vertical {
+			-webkit-perspective: 1000;
+			-moz-perspective: 1000;
+			-o-perspective: 1000;
+			perspective: 1000;
+
+			&:hover, &.hover {
+				.fliper {
+					-webkit-transform: rotateX(180deg);
+					-moz-transform: rotateX(180deg);
+					-o-transform: rotateX(180deg);
+					transform: rotateX(180deg);
+				}
+			}
+			.fliper {
+				-webkit-transition: 0.6s;
+				-webkit-transform-style: preserve-3d;
+				-moz-transition: 0.6s;
+				-moz-transform-style: preserve-3d;
+				-o-transition: 0.6s;
+				-o-transform-style: preserve-3d;
+				transition: 0.6s;
+				transform-style: preserve-3d;
+				position: relative;
+			}
+			
+			.frontside, .backside {
+				-webkit-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-o-backface-visibility: hidden;
+				backface-visibility: hidden;
+			}
+			.backside {
+				-webkit-transform: rotateX(180deg);
+				-moz-transform: rotateX(180deg);
+				-o-transform: rotateX(180deg);
+				transform: rotateX(180deg);
+				background: #f8f8f8;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 1;
+
+			}
+
+		}
+	}
+	&.zoomer {
+		
+	}
+}
+
+

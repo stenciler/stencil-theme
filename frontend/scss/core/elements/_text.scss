@@ -1,0 +1,17 @@
+.text {
+	position: relative;
+	&.center {
+		text-align: center; 
+	}
+	&.big {
+
+	}
+	&.small {
+
+	}
+	.icon {
+		&.medium {
+			font-size: 2rem;
+		}
+	}
+}

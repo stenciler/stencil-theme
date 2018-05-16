@@ -1,0 +1,82 @@
+/*****************************************
+* Variables
+*****************************************/
+
+/*****************************************
+* Layout
+*****************************************/
+.counter {
+	display: inline-block;
+	.count {
+		font-weight:bold;
+	}
+	.title {
+		
+	}
+}
+
+/*****************************************
+* variant
+*****************************************/
+.counter {
+	&.vertical {
+		display: block;
+		text-align: center;
+		line-height: 1;
+		.count {
+			font-size: 2.4rem;
+			display: block;
+			margin-bottom: 10px;
+		}
+		.title {
+			display: block;
+		}
+	}
+}
+.counter {
+	&.social_counter {
+		.icon {
+			width: 40px;
+			height: 40px;
+			color: #fff;
+			line-height: 40px;
+			text-align: center;
+			margin-right: 10px;
+			background-color: #333;
+			text-shadow: 1px 1px 2px rgba(0,0,0,.3);
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			transition: all .2s linear;
+			-webkit-transition: all .2s linear;
+		}
+		.data {
+				color: #000;
+				.number {
+					font-size: 15px;
+					font-weight: bold!important;
+					line-height: 1;
+					margin-bottom: 8px;
+				}
+				.text {
+					font-size: 10px;
+					text-transform: uppercase;
+					line-height: 1;
+					color: #888;
+				}
+			}
+	}
+}
+/*****************************************
+* styles
+*****************************************/
+.counter {
+	&.flex {
+		display: flex;
+		.icon {
+
+		}
+		.data {
+
+		}
+	}
+}

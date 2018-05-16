@@ -1,0 +1,16 @@
+{
+  "source": "./",
+  "target": "../assets/",
+  "css": [
+    "scss/stencil.scss"
+  ],
+  "flags": [
+    "flags/**"
+  ],
+  "fonts": [
+    "fonts/**"
+  ],
+  "js": [
+    "js/stencil.js"
+  ]
+}

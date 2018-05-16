@@ -1,0 +1,92 @@
+/*****************************************
+* Variables
+*****************************************/
+
+/*****************************************
+* Main
+*****************************************/
+.item {
+	.meta {
+		padding: 0;
+		margin-bottom: 10px;
+		.title {
+			font-size: 1.2rem;
+			font-weight: 500;
+			margin-bottom: 8px;
+			color: #000;
+		}
+		.crumbs {
+			font-size: 0.83rem;
+			line-height: 1.1;
+		}
+	}
+	.embed {
+		margin-bottom: 0.45rem;
+	}
+	.text {
+		font-size: 0.938888rem;
+		line-height: 1.5;
+	}
+	.action {
+		font-size: 0.87rem;
+	}
+	.text-holder {
+		padding: 0.25rem;
+	}
+}
+/*****************************************
+* Variant
+*****************************************/
+.item {
+	&.item_list {
+		margin-bottom: 0.7rem;
+	}
+
+}
+
+/*****************************************
+* Style
+*****************************************/
+.item {
+	&.flex {
+		display: flex;
+		margin-bottom: 15px;
+		.embed {
+			margin-bottom: 0;
+		}
+		.embed-holder {
+			max-width: 40%;
+		}
+		.text-holder {
+			flex: 1;
+			padding: 0 15px;
+		}
+	}
+}
+
+
+/*****************************************
+* sidebar
+*****************************************/
+
+.sidebar {
+	.item {
+		.meta {
+			.title {
+				font-size:0.899999rem;
+			}
+			.date {
+				font-size: 0.8rem;
+				line-height: 1;
+				.fa {
+					margin-right: 5px;
+				}
+			}
+		}
+		&.flex {
+			.embed-holder {
+				max-width: 30%;
+			}
+		}
+	}
+}
