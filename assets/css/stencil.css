@@ -2631,6 +2631,27 @@ blockquote.right {
 /*****************************************
 * Main
 *****************************************/
+.collection .filter {
+  display: flex;
+  margin-bottom: 15px;
+  text-transform: uppercase; }
+  .collection .filter .options {
+    margin-left: auto; }
+  .collection .filter .title {
+    font-size: 1.9rem;
+    color: #000;
+    text-align: left; }
+  .collection .filter .option {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .collection .filter .option .label {
+      color: #000;
+      margin-right: 10px;
+      font-weight: bold; }
+    .collection .filter .option .btn {
+      margin-left: 9px; }
+
 .collection .items .item {
   margin-bottom: 20px;
   border-bottom: 1px solid #ebebeb; }

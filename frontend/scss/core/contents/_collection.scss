@@ -6,6 +6,32 @@
 * Main
 *****************************************/
 .collection {
+	.filter {
+		display: flex;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		.options {
+			margin-left: auto;
+		}
+		.title {
+			font-size: 1.9rem;
+			color: #000;
+			text-align: left;
+		}
+		.option {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.label {
+				color: #000;
+				margin-right: 10px;
+				font-weight: bold;
+			}
+			.btn {
+				margin-left: 9px;
+			}
+		}
+	}
 	.items {
 		.item {
 			margin-bottom: 20px;
@@ -15,7 +41,6 @@
 			}
 		}
 	}
-	
 }
 .collection {
 	.row {
