@@ -2349,8 +2349,19 @@ blockquote.right {
 .ux-cover {
   position: relative;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
   text-align: center; }
+  .ux-cover:before {
+    content: ' ';
+    background: #000;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1; }
   .ux-cover .container, .ux-cover .container-fluid, .ux-cover .inner {
     position: relative; }
   .ux-cover .breadcrumb {
@@ -2374,30 +2385,51 @@ blockquote.right {
         padding: 7px 10px;
         list-style: none;
         font-size: 0.9rem; }
+  .ux-cover .parallax iframe {
+    width: 100%;
+    height: 100%; }
 
+/*****************************************
+* Overlay
+*****************************************/
 .ux-cover.overlay-light:before {
-  content: ' ';
-  background: rgba(255, 255, 255, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: 1; }
+  background: #fff; }
 
 .ux-cover.overlay-dark:before {
-  content: ' ';
-  background: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: 1; }
+  background: #000; }
+
+.ux-cover.overlay-0:before {
+  opacity: 0; }
+
+.ux-cover.overlay-10:before {
+  opacity: 0.10; }
+
+.ux-cover.overlay-20:before {
+  opacity: 0.20; }
+
+.ux-cover.overlay-30:before {
+  opacity: 0.30; }
+
+.ux-cover.overlay-40:before {
+  opacity: 0.40; }
+
+.ux-cover.overlay-50:before {
+  opacity: 0.50; }
+
+.ux-cover.overlay-60:before {
+  opacity: 0.60; }
+
+.ux-cover.overlay-70:before {
+  opacity: 0.70; }
+
+.ux-cover.overlay-80:before {
+  opacity: 0.80; }
+
+.ux-cover.overlay-90:before {
+  opacity: 0.90; }
+
+.ux-cover.overlay-100:before {
+  opacity: 1; }
 
 /*****************************************
 * Variant
@@ -2972,28 +3004,28 @@ blockquote.right {
   z-index: 10; }
 
 .swiper-container-3d .swiper-slide-shadow-left {
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
-  background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
-  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent); }
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
 
 .swiper-container-3d .swiper-slide-shadow-right {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(transparent));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
 
 .swiper-container-3d .swiper-slide-shadow-top {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent); }
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
 
 .swiper-container-3d .swiper-slide-shadow-bottom {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent); }
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
 
 .swiper-container-wp8-horizontal, .swiper-container-wp8-horizontal > .swiper-wrapper {
   -ms-touch-action: pan-y;
@@ -3501,7 +3533,7 @@ button.swiper-pagination-bullet {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 /* mouse grab icon */
 .grabbing {

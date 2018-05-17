@@ -24,6 +24,7 @@
 	</head>
 	<?php do_action('stencil_before_body'); ?>
 	<body <?php body_class(); ?>>
+
 		<?php do_action('stencil_before_main'); ?>
 		<main class="ux-main">
 			<?php
